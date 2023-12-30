@@ -22,7 +22,7 @@ impl fmt::Display for NodeInfo {
 
 type XxHash64Hasher = BuildHasherDefault<XxHash64>;
 
-/// HashRing
+#[derive(Debug, Clone)]
 pub struct HashRing<T, S = XxHash64Hasher> {
     replicas: isize,
     ring: HashMap<u64, T>,
